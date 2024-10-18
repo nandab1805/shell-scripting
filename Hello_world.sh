@@ -1,3 +1,3 @@
 #! /bin/bash
-
-Hi
+# this is comment
+echo "Hello World"
