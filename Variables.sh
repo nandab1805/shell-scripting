@@ -10,4 +10,4 @@ echo "$person2: I am good $person1, How are you"
 
 
 date=$(date)
-echo "Date and time is: ${Date}"
+echo "Date and time is: $Date"
