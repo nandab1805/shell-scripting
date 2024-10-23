@@ -8,5 +8,5 @@
 # In this code username and password will be displayed we will write cod ewithout displaying it
 
 echo "Please enter Username"
-read Username #the value entered above will be automatically attached to username variable
+read -s Username #the value entered above will be automatically attached to username variable
 echo "Username is: $Username"
