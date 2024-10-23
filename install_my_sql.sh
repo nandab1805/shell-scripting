@@ -8,7 +8,7 @@ then
 else
     echo "You are Root User"
 fi #fi means reverse of if ,indicating condition end
-yum install mysqllll -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then
