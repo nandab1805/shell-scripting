@@ -11,15 +11,15 @@ N="\e[0m"
 validate(){
     if [ $1 -ne 0 ]
     then
-        echo "Error:: $2 ... $R failed $N"
+        echo -e "Error:: $2 ... $R failed $N"
         exit 1
     else
-        echo "$2 ...$G Success $N"
+        echo -e "$2 ... $G Success $N"
     fi
 }
 if [ $Id -ne 0 ]
 then
-    echo "$R Error::Please run this script with root access $N"
+    echo -e "$R Error::Please run this script with root access $N"
     exit 1 
 else
     echo "You are Root User"
