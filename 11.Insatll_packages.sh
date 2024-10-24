@@ -1,7 +1,7 @@
 #!/bin/bash
 Id=$(id -u)
 validate(){
-    if [$1 -ne 0]
+    if [ $1 -ne 0 ]
 then
     echo "Error::$2 ...Failed"
     exit 1
