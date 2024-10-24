@@ -7,6 +7,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+echo "Script started exceuting at $timestamp" & >> $Logfile
 
 validate(){
     if [ $1 -ne 0 ]
