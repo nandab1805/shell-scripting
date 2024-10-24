@@ -34,7 +34,7 @@ do
         yum install $package -y &>> $Logs #install the package
         validate $? "Installation of $package" #validate
     else
-        echo -e "$package is alreadu installed... $Y skipping $N"
+        echo -e "$package is already installed... $Y skipping $N"
     fi
 done
 
