@@ -24,8 +24,24 @@ then
 else
     echo -e "You are root user"
 fi
-yum install mysql -y &>> $Logs
-validate $? "Installing mysql"
-yum install git -y &>> $Logs
-validate $? "Installing git"
-echo "All arguments passed: $@"
+#git mysql postfix net-tools
+#package=git for first time
+for package in $@
+do
+    yum list installed $package &>> $Logs  #check installed or not 
+    if [$? -ne 0] #if not installed
+    then
+        yum install $package -y &>> $Logs #install the package
+        validate $? "Installation of $package" #validate
+    else
+        echo -e "$package is alreadu installed... $Y skipping $N"
+    fi
+done
+
+
+
+# yum install mysql -y &>> $Logs
+# validate $? "Installing mysql"
+# yum install git -y &>> $Logs
+# validate $? "Installing git"
+# echo "All arguments passed: $@"
