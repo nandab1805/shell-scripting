@@ -6,3 +6,4 @@ then
     exit 1
 else
     echo -e "You are root user"
+fi
