@@ -1,13 +1,13 @@
 #!/bin/bash
 Id=$(id -u)
-timestamp=$(date +%F-%H-%M-%S)
-Logfile="/tmp/$0-$timestamp.log"
-R="\e[31m"
-G="\e[32m"
-Y="\e[33m"
-N="\e[0m"
+# timestamp=$(date +%F-%H-%M-%S)
+# Logfile="/tmp/$0-$timestamp.log"
+# R="\e[31m"
+# G="\e[32m"
+# Y="\e[33m"
+# N="\e[0m"
 
-echo "Script started exceuting at $timestamp" & >> $Logfile
+# echo "Script started exceuting at $timestamp" & >> $Logfile
 
 validate(){
     if [ $1 -ne 0 ]
@@ -26,7 +26,7 @@ else
     echo "You are Root User"
 fi
 
-yum install mysql -y &>> $Logfile
+yum install mysql -y #&>> $Logfile
 validate $? "Installed mysql"
-yum install git -y &>> $Logfile
+yum install git -y #&>> $Logfile
 validate $? "Installed git"
