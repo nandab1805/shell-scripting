@@ -28,3 +28,4 @@ yum install mysql -y &>> $Logs
 validate $? "Installing mysql"
 yum install git -y &>> $Logs
 validate $? "Installing git"
+echo "All arguments passed: $@"
